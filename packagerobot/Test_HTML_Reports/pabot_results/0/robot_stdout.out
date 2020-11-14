@@ -1,0 +1,19 @@
+==============================================================================
+TC Registration :: Setting this TC for Registration Page elements.            
+==============================================================================
+TC_0 Maximize the browsers :: This TC is for Maximize the browsers    | PASS |
+------------------------------------------------------------------------------
+TC_1 Click on Home and get redirect to the Login page. :: This TC ... | PASS |
+------------------------------------------------------------------------------
+TC_2 Verify elements present on the login page. :: This TC is for ... | PASS |
+Passing the test case
+------------------------------------------------------------------------------
+TC_3 Mouse hover and Click on Register link and get redirect to th... | PASS |
+------------------------------------------------------------------------------
+TC_4 Insert datas into the fileds to complete the registration. ::... | PASS |
+------------------------------------------------------------------------------
+TC Registration :: Setting this TC for Registration Page elements.    | PASS |
+5 critical tests, 5 passed, 0 failed
+5 tests total, 5 passed, 0 failed
+==============================================================================
+Output:  E:\Manual_Automation\PyCharmIDE\2021_Projects\Project_RPA_BlazeDemo_Site\packagerobot\Test_HTML_Reports\pabot_results\0\output.xml

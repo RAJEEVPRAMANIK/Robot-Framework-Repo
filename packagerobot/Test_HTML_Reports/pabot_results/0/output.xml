@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20201108 15:13:44.298" rpa="false">
+<suite id="s1" name="TC Registration" source="E:\Manual_Automation\PyCharmIDE\2021_Projects\Project_RPA_BlazeDemo_Site\packagerobot\Test_Cases\TC_Registration.robot">
+<kw name="KW_1: Browser Invokes SetUp" library="TC_SetUp_TearDown" type="setup">
+<doc>This is a section where browsers invoke keywords are mentioned.</doc>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${Browser_Name}" == "headlesschrome"</arg>
+<arg>Open Browser</arg>
+<arg>${SiteURL}</arg>
+<arg>${Browser_Name}</arg>
+<arg>ELSE IF</arg>
+<arg>"${Browser_Name}" == "chrome"</arg>
+<arg>Open Browser</arg>
+<arg>${SiteURL}</arg>
+<arg>${Browser_Name}</arg>
+<arg>ELSE IF</arg>
+<arg>"${Browser_Name}" == "headlessfirefox"</arg>
+<arg>Open Browser</arg>
+<arg>${SiteURL}</arg>
+<arg>${Browser_Name}</arg>
+<arg>ELSE</arg>
+<arg>Open Browser</arg>
+<arg>${SiteURL}</arg>
+<arg>${Browser_Name}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${SiteURL}</arg>
+<arg>${Browser_Name}</arg>
+</arguments>
+<msg timestamp="20201108 15:13:45.262" level="INFO">Opening browser 'chrome' to base url 'https://blazedemo.com'.</msg>
+<status status="PASS" starttime="20201108 15:13:45.262" endtime="20201108 15:13:49.360"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:45.261" endtime="20201108 15:13:49.360"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:45.261" endtime="20201108 15:13:49.360"></status>
+</kw>
+<test id="s1-t1" name="TC_0 Maximize the browsers">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>TC_SetUp_TearDown.KW_2: Browsers is Maximized</arg>
+</arguments>
+<kw name="KW_2: Browsers is Maximized" library="TC_SetUp_TearDown">
+<doc>This KW is for maximizing the browser.</doc>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20201108 15:13:49.362" endtime="20201108 15:13:51.509"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:49.362" endtime="20201108 15:13:51.509"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:49.361" endtime="20201108 15:13:51.509"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>TC_SetUp_TearDown.KW_3: Sleep Mode</arg>
+</arguments>
+<kw name="KW_3: Sleep Mode" library="TC_SetUp_TearDown">
+<doc>This section is for the time to wait.</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<msg timestamp="20201108 15:13:53.516" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20201108 15:13:51.510" endtime="20201108 15:13:53.516"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:51.509" endtime="20201108 15:13:53.516"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:51.509" endtime="20201108 15:13:53.516"></status>
+</kw>
+<doc>This TC is for Maximize the browsers</doc>
+<tags>
+<tag>Smoke Test</tag>
+</tags>
+<status status="PASS" starttime="20201108 15:13:49.360" endtime="20201108 15:13:53.516" critical="yes"></status>
+</test>
+<test id="s1-t2" name="TC_1 Click on Home and get redirect to the Login page.">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>KW_Home_Page.KW_10: Verify clicking the home hyperlink.</arg>
+</arguments>
+<kw name="KW_10: Verify clicking the home hyperlink." library="KW_Home_Page">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${Xpath_Home}</arg>
+</arguments>
+<msg timestamp="20201108 15:13:53.518" level="INFO">Clicking link 'xpath://*[starts-with(@class,'container')]//a[contains(text(),'home')]'.</msg>
+<status status="PASS" starttime="20201108 15:13:53.518" endtime="20201108 15:13:55.301"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Clicked on the Home elements.</arg>
+</arguments>
+<msg timestamp="20201108 15:13:55.302" level="INFO">Clicked on the Home elements.</msg>
+<status status="PASS" starttime="20201108 15:13:55.302" endtime="20201108 15:13:55.302"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:53.518" endtime="20201108 15:13:55.302"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:53.517" endtime="20201108 15:13:55.302"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>TC_SetUp_TearDown.KW_3_0: Set Browser Implicit Wait</arg>
+</arguments>
+<kw name="KW_3_0: Set Browser Implicit Wait" library="TC_SetUp_TearDown">
+<doc>This section is for the Selenium Implicit Wait.</doc>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:13:55.303" endtime="20201108 15:13:55.305"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:55.302" endtime="20201108 15:13:55.305"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:55.302" endtime="20201108 15:13:55.305"></status>
+</kw>
+<doc>This TC is for Click on Home and get redirect to the Login page.</doc>
+<tags>
+<tag>Smoke Test</tag>
+</tags>
+<status status="PASS" starttime="20201108 15:13:53.517" endtime="20201108 15:13:55.305" critical="yes"></status>
+</test>
+<test id="s1-t3" name="TC_2 Verify elements present on the login page.">
+<kw name="Pass Execution" library="BuiltIn">
+<doc>Skips rest of the current test, setup, or teardown with PASS status.</doc>
+<arguments>
+<arg>Passing the test case</arg>
+<arg>deprecated</arg>
+<arg>-regression</arg>
+</arguments>
+<msg timestamp="20201108 15:13:55.306" level="INFO">Removed tag 'regression'.</msg>
+<msg timestamp="20201108 15:13:55.306" level="INFO">Set tag 'deprecated'.</msg>
+<msg timestamp="20201108 15:13:55.306" level="INFO">Execution passed with message:
+Passing the test case</msg>
+<status status="PASS" starttime="20201108 15:13:55.306" endtime="20201108 15:13:55.307"></status>
+</kw>
+<doc>This TC is for Verify elements present on the login page.</doc>
+<tags>
+<tag>deprecated</tag>
+<tag>Smoke Test</tag>
+</tags>
+<status status="PASS" starttime="20201108 15:13:55.305" endtime="20201108 15:13:55.307" critical="yes">Passing the test case</status>
+</test>
+<test id="s1-t4" name="TC_3 Mouse hover and Click on Register link and get redirect to the Registreation page.">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>KW_Reg_Page.KW Mouse hover on the Register Element.</arg>
+</arguments>
+<kw name="KW Mouse hover on the Register Element." library="KW_Reg_Page">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${Xpath_Register_Link}</arg>
+</arguments>
+<msg timestamp="20201108 15:13:55.309" level="INFO">Simulating Mouse Over on element 'xpath://a[contains(text(),'Register')]'.</msg>
+<status status="PASS" starttime="20201108 15:13:55.308" endtime="20201108 15:13:55.606"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:55.308" endtime="20201108 15:13:55.607"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:55.308" endtime="20201108 15:13:55.607"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>TC_SetUp_TearDown.KW_3_0: Set Browser Implicit Wait</arg>
+</arguments>
+<kw name="KW_3_0: Set Browser Implicit Wait" library="TC_SetUp_TearDown">
+<doc>This section is for the Selenium Implicit Wait.</doc>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:13:55.611" endtime="20201108 15:13:55.615"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:55.609" endtime="20201108 15:13:55.616"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:55.608" endtime="20201108 15:13:55.616"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>KW_Reg_Page.KW Click on the Register element.</arg>
+</arguments>
+<kw name="KW Click on the Register element." library="KW_Reg_Page">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Xpath_Register_Link}</arg>
+</arguments>
+<msg timestamp="20201108 15:13:55.620" level="INFO">Clicking element 'xpath://a[contains(text(),'Register')]'.</msg>
+<status status="PASS" starttime="20201108 15:13:55.619" endtime="20201108 15:13:56.117"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:55.618" endtime="20201108 15:13:56.117"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:55.616" endtime="20201108 15:13:56.117"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>TC_SetUp_TearDown.KW_3_0: Set Browser Implicit Wait</arg>
+</arguments>
+<kw name="KW_3_0: Set Browser Implicit Wait" library="TC_SetUp_TearDown">
+<doc>This section is for the Selenium Implicit Wait.</doc>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:13:56.119" endtime="20201108 15:13:56.121"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:56.118" endtime="20201108 15:13:56.121"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:56.117" endtime="20201108 15:13:56.121"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>sleep</arg>
+<arg>5 seconds</arg>
+</arguments>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.126" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20201108 15:13:56.121" endtime="20201108 15:14:01.127"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:13:56.121" endtime="20201108 15:14:01.127"></status>
+</kw>
+<doc>This TC is for Mouse hover and Click on Register link and get redirect to the Registreation page.</doc>
+<tags>
+<tag>Smoke Test</tag>
+</tags>
+<status status="PASS" starttime="20201108 15:13:55.307" endtime="20201108 15:14:01.128" critical="yes"></status>
+</test>
+<test id="s1-t5" name="TC_4 Insert datas into the fileds to complete the registration.">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>KW_Reg_Page.KW Enter Name, Email &amp; Password using faker.</arg>
+</arguments>
+<kw name="KW Enter Name, Email &amp; Password using faker." library="KW_Reg_Page">
+<tags>
+<tag>Faker for Name, Email &amp; Pwd</tag>
+</tags>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Generate User Name</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:14:01.136" endtime="20201108 15:14:01.137"></status>
+</kw>
+<kw name="Name" library="FakerLibrary">
+<doc>:example 'John Doe'</doc>
+<assign>
+<var>${UserName}</var>
+</assign>
+<msg timestamp="20201108 15:14:01.139" level="INFO">${UserName} = Stephanie Phillips</msg>
+<status status="PASS" starttime="20201108 15:14:01.137" endtime="20201108 15:14:01.139"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${UserName}</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.141" level="INFO">Stephanie Phillips</msg>
+<status status="PASS" starttime="20201108 15:14:01.140" endtime="20201108 15:14:01.141"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Xpath_Name_Field}</arg>
+<arg>${UserName}</arg>
+<arg>bool = True</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.142" level="INFO">Typing text 'Stephanie Phillips' into text field 'xpath://*[starts-with(@class,'panel panel-default')]//*[@class='col-md-6']/*[@id='name' or @name='name']'.</msg>
+<status status="PASS" starttime="20201108 15:14:01.141" endtime="20201108 15:14:01.232"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Generate Email Address</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:14:01.232" endtime="20201108 15:14:01.232"></status>
+</kw>
+<kw name="Email" library="FakerLibrary">
+<assign>
+<var>${Email_Address}</var>
+</assign>
+<msg timestamp="20201108 15:14:01.234" level="INFO">${Email_Address} = nathan73@murphy.com</msg>
+<status status="PASS" starttime="20201108 15:14:01.232" endtime="20201108 15:14:01.234"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Email_Address}</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.235" level="INFO">nathan73@murphy.com</msg>
+<status status="PASS" starttime="20201108 15:14:01.235" endtime="20201108 15:14:01.235"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Xpath_E_Mail_Address_For_Reg}</arg>
+<arg>${Email_Address}</arg>
+<arg>bool = True</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.235" level="INFO">Typing text 'nathan73@murphy.com' into text field 'xpath://*[starts-with(@class,'panel panel-default')]//*[@class='col-md-6']/*[@id='email' or @name='email']'.</msg>
+<status status="PASS" starttime="20201108 15:14:01.235" endtime="20201108 15:14:01.320"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Generate password &amp; confirm password.</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:14:01.320" endtime="20201108 15:14:01.320"></status>
+</kw>
+<kw name="Password" library="FakerLibrary">
+<doc>Generate a random password of the specified ``length``.</doc>
+<assign>
+<var>${Password}</var>
+</assign>
+<msg timestamp="20201108 15:14:01.321" level="INFO">${Password} = +0HOY9hV%b</msg>
+<status status="PASS" starttime="20201108 15:14:01.320" endtime="20201108 15:14:01.321"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.321" level="INFO">+0HOY9hV%b</msg>
+<status status="PASS" starttime="20201108 15:14:01.321" endtime="20201108 15:14:01.321"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${text_Password_For_Reg}</arg>
+<arg>${Password}</arg>
+<arg>bool = True</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.321" level="INFO">Typing text '+0HOY9hV%b' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20201108 15:14:01.321" endtime="20201108 15:14:01.397"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${text_Confirm_Password_For_Reg}</arg>
+<arg>${Password}</arg>
+<arg>bool = True</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.398" level="INFO">Typing text '+0HOY9hV%b' into text field 'name:password_confirmation'.</msg>
+<status status="PASS" starttime="20201108 15:14:01.398" endtime="20201108 15:14:01.470"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>KW Open the Excel Sheet.</arg>
+</arguments>
+<kw name="KW Open the Excel Sheet." library="KW_Reg_Page">
+<kw name="Open Workbook" library="ExcellentLibrary">
+<doc>Opens the workbook found at the given file path.
+_NOTE_: Please note that at present _XLS_ files are not supported.</doc>
+<arguments>
+<arg>E:/Manual_Automation/PyCharmIDE/2021_Projects/Project_RPA_BlazeDemo_Site/packagerobot/Test_Excel_DataDriver/testfile.xlsx</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:14:01.471" endtime="20201108 15:14:01.476"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.471" endtime="20201108 15:14:01.476"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.470" endtime="20201108 15:14:01.476"></status>
+</kw>
+<kw name="Get Row Count" library="ExcellentLibrary">
+<doc>Returns the number of non-empty rows in the active sheet.</doc>
+<assign>
+<var>${Get_Row_Count}</var>
+</assign>
+<msg timestamp="20201108 15:14:01.477" level="INFO">${Get_Row_Count} = 1</msg>
+<status status="PASS" starttime="20201108 15:14:01.476" endtime="20201108 15:14:01.477"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Get_Row_Count}</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.477" level="INFO">1</msg>
+<status status="PASS" starttime="20201108 15:14:01.477" endtime="20201108 15:14:01.477"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Get_Row_Count}+1</arg>
+</arguments>
+<assign>
+<var>${Next_Row_Evalute}</var>
+</assign>
+<msg timestamp="20201108 15:14:01.477" level="INFO">${Next_Row_Evalute} = 2</msg>
+<status status="PASS" starttime="20201108 15:14:01.477" endtime="20201108 15:14:01.477"></status>
+</kw>
+<kw name="Write To Cell" library="ExcellentLibrary">
+<doc>Writes a value to the supplied cell.</doc>
+<arguments>
+<arg>A${Next_Row_Evalute}</arg>
+<arg>${UserName}</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:14:01.477" endtime="20201108 15:14:01.478"></status>
+</kw>
+<kw name="Write To Cell" library="ExcellentLibrary">
+<doc>Writes a value to the supplied cell.</doc>
+<arguments>
+<arg>B${Next_Row_Evalute}</arg>
+<arg>${Email_Address}</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:14:01.478" endtime="20201108 15:14:01.478"></status>
+</kw>
+<kw name="Write To Cell" library="ExcellentLibrary">
+<doc>Writes a value to the supplied cell.</doc>
+<arguments>
+<arg>C${Next_Row_Evalute}</arg>
+<arg>${Password}</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:14:01.478" endtime="20201108 15:14:01.478"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>KW Save and close the Excel Sheet.</arg>
+</arguments>
+<kw name="KW Save and close the Excel Sheet." library="KW_Reg_Page">
+<kw name="Save" library="ExcellentLibrary">
+<doc>Saves the changes to the currently active workbook.</doc>
+<status status="PASS" starttime="20201108 15:14:01.479" endtime="20201108 15:14:01.487"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.479" endtime="20201108 15:14:01.487"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.479" endtime="20201108 15:14:01.487"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>KW Close the current workbook.</arg>
+</arguments>
+<kw name="KW Close the current workbook." library="KW_Reg_Page">
+<kw name="Close Workbook" library="ExcellentLibrary">
+<doc>Closes the workbook identified by the supplied alias.</doc>
+<status status="PASS" starttime="20201108 15:14:01.488" endtime="20201108 15:14:01.488"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.488" endtime="20201108 15:14:01.488"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.487" endtime="20201108 15:14:01.488"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.135" endtime="20201108 15:14:01.488"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.133" endtime="20201108 15:14:01.488"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>TC_SetUp_TearDown.KW_3_0: Set Browser Implicit Wait</arg>
+</arguments>
+<kw name="KW_3_0: Set Browser Implicit Wait" library="TC_SetUp_TearDown">
+<doc>This section is for the Selenium Implicit Wait.</doc>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:14:01.489" endtime="20201108 15:14:01.491"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.489" endtime="20201108 15:14:01.491"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.488" endtime="20201108 15:14:01.491"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>KW_Reg_Page.KW Enter Company Name.</arg>
+</arguments>
+<kw name="KW Enter Company Name." library="KW_Reg_Page">
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Generate Company Name</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:14:01.492" endtime="20201108 15:14:01.492"></status>
+</kw>
+<kw name="Company" library="FakerLibrary">
+<doc>:example 'Acme Ltd'</doc>
+<assign>
+<var>${Company_Name}</var>
+</assign>
+<msg timestamp="20201108 15:14:01.492" level="INFO">${Company_Name} = Nash Group</msg>
+<status status="PASS" starttime="20201108 15:14:01.492" endtime="20201108 15:14:01.492"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Company_Name}</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.492" level="INFO">Nash Group</msg>
+<status status="PASS" starttime="20201108 15:14:01.492" endtime="20201108 15:14:01.492"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Xpath_Company_Field}</arg>
+<arg>${Company_Name}</arg>
+<arg>bool = True</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.492" level="INFO">Typing text 'Nash Group' into text field 'xpath://*[starts-with(@class,'panel panel-default')]//*[@class='col-md-6']/*[@id='company' or @name='company']'.</msg>
+<status status="PASS" starttime="20201108 15:14:01.492" endtime="20201108 15:14:01.572"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.491" endtime="20201108 15:14:01.572"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.491" endtime="20201108 15:14:01.572"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>TC_SetUp_TearDown.KW_3_0: Set Browser Implicit Wait</arg>
+</arguments>
+<kw name="KW_3_0: Set Browser Implicit Wait" library="TC_SetUp_TearDown">
+<doc>This section is for the Selenium Implicit Wait.</doc>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:14:01.573" endtime="20201108 15:14:01.574"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.573" endtime="20201108 15:14:01.574"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.573" endtime="20201108 15:14:01.574"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>KW_Reg_Page.KW Get Column Count.</arg>
+</arguments>
+<kw name="KW Get Column Count." library="KW_Reg_Page">
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Pass</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:14:01.575" endtime="20201108 15:14:01.575"></status>
+</kw>
+<kw name="Get Column Count" library="ExcellentLibrary">
+<doc>Returns the number of non-empty columns in the active sheet.</doc>
+<assign>
+<var>${Get_Column_Count}</var>
+</assign>
+<msg timestamp="20201108 15:14:01.575" level="INFO">${Get_Column_Count} = 3</msg>
+<status status="PASS" starttime="20201108 15:14:01.575" endtime="20201108 15:14:01.575"></status>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<arguments>
+<arg>${Get_Column_Count}</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.576" level="INFO">${Get_Column_Count} = 3</msg>
+<status status="PASS" starttime="20201108 15:14:01.575" endtime="20201108 15:14:01.576"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Get_Column_Count}</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.576" level="INFO">3</msg>
+<status status="PASS" starttime="20201108 15:14:01.576" endtime="20201108 15:14:01.576"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.575" endtime="20201108 15:14:01.576"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.574" endtime="20201108 15:14:01.576"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>KW_Reg_Page.KW Get Row Count.</arg>
+</arguments>
+<kw name="KW Get Row Count." library="KW_Reg_Page">
+<kw name="Get Row Count" library="ExcellentLibrary">
+<doc>Returns the number of non-empty rows in the active sheet.</doc>
+<assign>
+<var>${Get_Row_Count}</var>
+</assign>
+<msg timestamp="20201108 15:14:01.577" level="INFO">${Get_Row_Count} = 2</msg>
+<status status="PASS" starttime="20201108 15:14:01.577" endtime="20201108 15:14:01.577"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Get_Row_Count}</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.577" level="INFO">2</msg>
+<status status="PASS" starttime="20201108 15:14:01.577" endtime="20201108 15:14:01.577"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.577" endtime="20201108 15:14:01.578"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.576" endtime="20201108 15:14:01.578"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>KW_Reg_Page.KW Click on Register Button</arg>
+</arguments>
+<kw name="KW Click on Register Button" library="KW_Reg_Page">
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>Clicking the Regsiter button.</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:14:01.578" endtime="20201108 15:14:01.578"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${Xpath_Register_Button}</arg>
+</arguments>
+<msg timestamp="20201108 15:14:01.579" level="INFO">Clicking button 'xpath://*[starts-with(@class,'panel panel-default')]//*[@class='col-md-6 col-md-offset-4']/*[contains(text(),'Register') and @type='submit' or @class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20201108 15:14:01.578" endtime="20201108 15:14:03.021"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.578" endtime="20201108 15:14:03.021"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:01.578" endtime="20201108 15:14:03.021"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>TC_SetUp_TearDown.KW_3_0: Set Browser Implicit Wait</arg>
+</arguments>
+<kw name="KW_3_0: Set Browser Implicit Wait" library="TC_SetUp_TearDown">
+<doc>This section is for the Selenium Implicit Wait.</doc>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:14:03.022" endtime="20201108 15:14:03.023"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:03.022" endtime="20201108 15:14:03.023"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:03.021" endtime="20201108 15:14:03.023"></status>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>KW Compare the text You are logged in!</arg>
+</arguments>
+<kw name="KW Compare the text You are logged in!" library="KW_Reg_Page">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${Xpath_You_Are_Logged_In}</arg>
+<arg>You are logged in!</arg>
+</arguments>
+<msg timestamp="20201108 15:14:03.024" level="INFO">Verifying element 'xpath://div[contains(text(),'You are logged in!')]' contains exact text 'You are logged in!'.</msg>
+<status status="PASS" starttime="20201108 15:14:03.024" endtime="20201108 15:14:03.086"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:03.024" endtime="20201108 15:14:03.086"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:03.023" endtime="20201108 15:14:03.086"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>TC_SetUp_TearDown.KW_3_0: Set Browser Implicit Wait</arg>
+</arguments>
+<kw name="KW_3_0: Set Browser Implicit Wait" library="TC_SetUp_TearDown">
+<doc>This section is for the Selenium Implicit Wait.</doc>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201108 15:14:03.087" endtime="20201108 15:14:03.088"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:03.087" endtime="20201108 15:14:03.088"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:03.086" endtime="20201108 15:14:03.088"></status>
+</kw>
+<doc>This TC is for Inserting datas into the fileds to complete the registration.</doc>
+<tags>
+<tag>Smoke Test</tag>
+</tags>
+<status status="PASS" starttime="20201108 15:14:01.130" endtime="20201108 15:14:03.088" critical="yes"></status>
+</test>
+<kw name="KW_4: Browser TearDown" library="TC_SetUp_TearDown" type="teardown">
+<doc>This section will close the browser after the execution.</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201108 15:14:03.089" endtime="20201108 15:14:05.240"></status>
+</kw>
+<status status="PASS" starttime="20201108 15:14:03.089" endtime="20201108 15:14:05.241"></status>
+</kw>
+<doc>Setting this TC for Registration Page elements.</doc>
+<status status="PASS" starttime="20201108 15:13:44.299" endtime="20201108 15:14:05.241"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0">Critical Tests</stat>
+<stat pass="5" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">deprecated</stat>
+<stat pass="5" fail="0">Smoke Test</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" id="s1" name="TC Registration">TC Registration</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
